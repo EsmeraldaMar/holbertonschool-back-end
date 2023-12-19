@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Records all tasks that are owned by this employee
-"""
+"""Records all tasks that are owned by this employee"""
 
 import csv
 import requests
@@ -31,6 +29,6 @@ if __name__ == "__main__":
                         "TASK_COMPLETED_STATUS", "TASK_TITLE"])
 
         # Loop through each todo item and write to the CSV file
-        for task in todos:
+        for todo in todos:
             write.writerow([user["id"], user["username"],
-                            task["completed"], task["title"]])
+                            todo["completed"], todo["title"]])
