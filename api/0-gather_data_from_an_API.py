@@ -22,7 +22,7 @@ if __name__ == "__main__":
         if task["completed"]:
             completed_task = completed_task + 1
 
-    print("Employee {} is done with ({}/{}):".format(
+    print("Employee {} is done with tasks({}/{}):".format(
         user.get("name"), completed_task, total_tasks))
     # gets info for employee name, then prints
 
