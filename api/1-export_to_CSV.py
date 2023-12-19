@@ -23,12 +23,14 @@ if __name__ == "__main__":
     with open(filename, mode="w", newline="") as csv_file:
         # Create a CSV writer object
         write = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
-
-        # Write headers to the CSV file
-        write.writerow(["USER_ID", "USERNAME",
-                        "TASK_COMPLETED_STATUS", "TASK_TITLE"])
-
-        # Loop through each todo item and write to the CSV file
         for todo in todos:
-            write.writerow([user["id"], user["username"],
-                            todo["completed"], todo["title"]])
+            write.writerow([user["id"], user["username"], todo["completed"],
+                           todo["title"]])
+        # # Write headers to the CSV file
+        # write.writerow(["USER_ID", "USERNAME",
+        #                 "TASK_COMPLETED_STATUS", "TASK_TITLE"])
+
+        # # Loop through each todo item and write to the CSV file
+        # for todo in todos:
+        #     write.writerow([user["id"], user["username"],
+        #                     todo["completed"], todo["title"]])
